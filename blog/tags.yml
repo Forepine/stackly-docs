@@ -1,0 +1,19 @@
+stackly:
+  label: Stackly
+  permalink: /stackly
+  description: Stackly platform updates and news
+
+announcement:
+  label: Announcement
+  permalink: /announcement
+  description: Product announcements and updates
+
+tutorial:
+  label: Tutorial
+  permalink: /tutorial
+  description: Tutorials and guides
+
+feature:
+  label: Feature
+  permalink: /feature
+  description: New features and improvements
