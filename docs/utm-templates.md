@@ -6,6 +6,8 @@ UTM Templates allow you to save predefined sets of UTM parameters that you can q
 
 To create a new UTM Template, navigate to the **UTM Templates** section in your dashboard and click **Create Template**.
 
+![Create UTM Template](/img/utm-template-create.png)
+
 You will need to provide the following information:
 
 ### Template Details

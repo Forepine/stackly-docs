@@ -2,6 +2,8 @@
 
 Stack Notes is a powerful task management and note-taking system designed to keep your team aligned and organized. It allows you to create personal notes, prioritize tasks, and collaborate seamlessly with your team.
 
+![Stack Notes Overview](/img/stack-notes-overview.png)
+
 ## Key Features
 
 ### 📝 Rich Text Formatting
@@ -33,6 +35,8 @@ To ensure transparency and effective management, the **Account Owner** has the a
 
 
 ## Getting Started
+
+![Create Stack Note](/img/stack-notes-create.png)
 
 1. Navigate to the **Stack Notes** section in your dashboard.
 2. Click **New Note**.
