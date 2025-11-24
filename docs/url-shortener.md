@@ -30,7 +30,7 @@ https://example.com/your-very-long-url-path/with/many/segments
 ### 2. 🏷️ Add Title
 **Required**
 
-Give your shortened link a memorable title to help you identify it later in your dashboard.
+Give your shortened link a memorable title or leave it blank to auto-generate a title based on the URL to help you identify it later in your dashboard.
 
 **Example:**
 ```
@@ -74,7 +74,7 @@ Set a date and time when the link should expire. After expiration, the link will
 
 **Example:**
 ```
-2024-12-31 23:59:59
+2025-12-31 23:59:59
 ```
 
 ## Advanced Targeting Options
@@ -108,6 +108,11 @@ Chrome, Firefox, Safari, Edge, Opera, Brave
 **Optional**
 
 Target users from specific geographic regions. Perfect for location-based campaigns.
+
+### 10. 🔗 Set UTM Parameters
+**Optional**
+
+Add UTM parameters to your shortened link to track and analyze your campaigns.
 
 **Example:**
 ```
@@ -181,7 +186,7 @@ Add a common comment or note that applies to all links in this batch.
 
 **Example:**
 ```
-Q4 2024 Product Launch - Social Media Campaign Links
+Q4 2025 Product Launch - Social Media Campaign Links
 ```
 
 ### Key Differences from Single Link Mode
@@ -215,6 +220,10 @@ Customize link behavior based on operating systems and browsers for optimized us
 
 ### 🔔 Real-time Alerts
 Get instant notifications when your links are clicked and track engagement in real-time.
+
+### 💎 Branded Domains (Premium)
+Use your own domain for short links (e.g., `link.yourbrand.com/xyz`) to build trust and brand recognition.
+**Format:** `<key>.yourdomain.com`
 
 ## Why Use Stackly URL Shortener?
 

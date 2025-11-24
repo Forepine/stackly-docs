@@ -1,4 +1,4 @@
-import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -16,8 +16,29 @@ const sidebars: SidebarsConfig = {
   // Stackly documentation sidebar
   tutorialSidebar: [
     'intro',
+    'dashboard',
     'url-shortener',
+    'branded-domains',
+    'utm-templates',
+    'team-members',
+    'stack-notes',
+    'integrations',
+    'folders',
+    'web-to-pdf',
     'digital-vcards',
+    {
+      type: 'category',
+      label: 'Account Management',
+      items: [
+        'profile',
+        'change-password',
+        'address-info',
+        'billing-info',
+        'pricing',
+        'api-keys',
+        'audit-logs',
+      ],
+    },
   ],
 };
 

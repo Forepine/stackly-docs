@@ -272,7 +272,7 @@ Use your own domain instead of stackly.in for a fully branded experience.
 
 **Example:**
 ```
-card.yourdomain.com/john-smith
+john-smith.yourdomain.com
 ```
 
 ### 🏷️ Custom Branding
