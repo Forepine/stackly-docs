@@ -21,6 +21,8 @@ Custom branded domains allow you to use your own domain name (e.g., `link.yourbr
 
 You need to point your domain to Stackly's servers so that links work correctly.
 
+![DNS Setup Example](images/dns-setup-example.png)
+
 #### For Subdomains (Recommended)
 If you are using a subdomain like `link.yourbrand.com`:
 
