@@ -65,4 +65,4 @@ Once active, you can select your branded domain when creating new short links.
 
 ## Need Help?
 
-If you're stuck, please contact our support team at [support@stackly.in](mailto:support@stackly.in) or visit our [Help Center](https://help.stackly.in).
+If you're stuck, please contact our support team at [support@stackly.in](mailto:support@stackly.in).
