@@ -9,27 +9,18 @@ const config: Config = {
   tagline: 'All-in-one platform for URL shortening, web scraping, PDF conversion, team collaboration, and more',
   favicon: 'img/favicon.svg',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
   url: 'https://docs.stackly.in',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Forepine', // Usually your GitHub org/user name.
-  projectName: 'stackly-docs', // Usually your repo name.
+  organizationName: 'Forepine',
+  projectName: 'stackly-docs',
 
   onBrokenLinks: 'throw',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -41,9 +32,9 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Forepine/stackly-docs/tree/main/',
+          editUrl: 'https://github.com/Forepine/stackly-docs/tree/main/',
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         },
         blog: {
           showReadingTime: true,
@@ -51,10 +42,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Forepine/stackly-docs/tree/main/',
-          // Useful options to enforce blogging best practices
+          editUrl: 'https://github.com/Forepine/stackly-docs/tree/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -67,19 +55,43 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/logo.png',
+
+    announcementBar: {
+      id: 'stackly_v2',
+      content:
+        '🚀 <strong>Stackly v2</strong> is now live with Digital vCards & Advanced Analytics! <a href="/docs/intro"><strong>See what\'s new →</strong></a>',
+      backgroundColor: '#7c3aed',
+      textColor: '#ffffff',
+      isCloseable: true,
+    },
+
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
+
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      },
+    },
+
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 4,
+    },
+
     navbar: {
       title: 'Stackly Docs',
       logo: {
         alt: 'Stackly Logo',
         src: 'img/stackly-final.svg',
       },
+      hideOnScroll: false,
+      style: 'dark',
       items: [
         {
           type: 'docSidebar',
@@ -90,8 +102,9 @@ const config: Config = {
         { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://app.stackly.in',
-          label: 'App',
+          label: '🚀 Open App',
           position: 'right',
+          className: 'navbar-app-link',
         },
         {
           href: 'https://github.com/Forepine/stackly-docs',
@@ -100,54 +113,46 @@ const config: Config = {
         },
       ],
     },
+
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Documentation',
+          title: '📚 Documentation',
           items: [
-            {
-              label: 'Getting Started',
-              to: '/docs/intro',
-            },
-            {
-              label: 'URL Shortener',
-              to: '/docs/url-shortener',
-            },
+            { label: 'Getting Started', to: '/docs/intro' },
+            { label: 'URL Shortener', to: '/docs/url-shortener' },
+            { label: 'Web to PDF', to: '/docs/web-to-pdf' },
+            { label: 'Digital vCards', to: '/docs/digital-vcards' },
+            { label: 'Stack Notes', to: '/docs/stack-notes' },
           ],
         },
         {
-          title: 'Product',
+          title: '🛠️ Product',
           items: [
-            {
-              label: 'Stackly App',
-              href: 'https://app.stackly.in',
-            },
-            {
-              label: 'Features',
-              to: '/docs/url-shortener',
-            },
+            { label: 'Stackly App', href: 'https://app.stackly.in' },
+            { label: 'Pricing', to: '/docs/pricing' },
+            { label: 'Integrations & API', to: '/docs/integrations' },
+            { label: 'Branded Domains', to: '/docs/branded-domains' },
           ],
         },
         {
-          title: 'More',
+          title: '🌐 Connect',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/Forepine/stackly-docs',
-            },
+            { label: 'Blog', to: '/blog' },
+            { label: 'GitHub', href: 'https://github.com/Forepine/stackly-docs' },
+            { label: 'Twitter / X', href: 'https://twitter.com/stacklyin' },
+            { label: 'LinkedIn', href: 'https://linkedin.com/company/forepine' },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Stackly by Forepine. All rights reserved.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <strong>Stackly</strong> by Forepine. All rights reserved.`,
     },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['bash', 'json', 'typescript', 'python', 'http'],
     },
   } satisfies Preset.ThemeConfig,
 };

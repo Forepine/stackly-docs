@@ -13,22 +13,37 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
  Create as many sidebars as you want.
  */
 const sidebars: SidebarsConfig = {
-  // Stackly documentation sidebar
   tutorialSidebar: [
-    'intro',
-    'dashboard',
-    'url-shortener',
-    'branded-domains',
-    'utm-templates',
-    'team-members',
-    'stack-notes',
-    'integrations',
-    'folders',
-    'web-to-pdf',
-    'digital-vcards',
     {
       type: 'category',
-      label: 'Account Management',
+      label: '🚀 Getting Started',
+      collapsed: false,
+      items: ['intro', 'dashboard'],
+    },
+    {
+      type: 'category',
+      label: '🔗 Core Tools',
+      collapsed: false,
+      items: [
+        'url-shortener',
+        'branded-domains',
+        'utm-templates',
+        'web-to-pdf',
+        'digital-vcards',
+        'stack-notes',
+        'folders',
+      ],
+    },
+    {
+      type: 'category',
+      label: '👥 Team & Collaboration',
+      collapsed: false,
+      items: ['team-members', 'integrations'],
+    },
+    {
+      type: 'category',
+      label: '⚙️ Account',
+      collapsed: true,
       items: [
         'profile',
         'change-password',
