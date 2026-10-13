@@ -2,158 +2,126 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+// Stackly Help Center: plain-language guides for every part of the app, styled like stackly.in
 
 const config: Config = {
-  title: 'Stackly Documentation',
-  tagline: 'All-in-one platform for URL shortening, web scraping, PDF conversion, team collaboration, and more',
-  favicon: 'img/favicon.svg',
+  title: 'Stackly Help Center',
+  tagline: 'Step-by-step guides for every part of Stackly, with screenshots',
+  favicon: 'img/brand/favicon.ico',
 
-  future: {
-    v4: true,
-  },
+  future: { v4: true },
 
   url: 'https://docs.stackly.in',
   baseUrl: '/',
-
   organizationName: 'Forepine',
   projectName: 'stackly-docs',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
+  markdown: { hooks: { onBrokenMarkdownLinks: 'throw' } },
 
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+  i18n: { defaultLocale: 'en', locales: ['en'] },
+
+  headTags: [
+    { tagName: 'link', attributes: { rel: 'preconnect', href: 'https://fonts.googleapis.com' } },
+    { tagName: 'link', attributes: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' } },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap',
+      },
+    },
+  ],
 
   presets: [
     [
       'classic',
       {
         docs: {
+          routeBasePath: '/',
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/Forepine/stackly-docs/tree/main/',
           showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
+          breadcrumbs: true,
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl: 'https://github.com/Forepine/stackly-docs/tree/main/',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
+        blog: false,
+        theme: { customCss: './src/css/custom.css' },
+        sitemap: { changefreq: 'weekly', priority: 0.5 },
       } satisfies Preset.Options,
     ],
   ],
 
-  themeConfig: {
-    image: 'img/logo.png',
-
-    announcementBar: {
-      id: 'stackly_v2',
-      content:
-        '🚀 <strong>Stackly v2</strong> is now live with Digital vCards & Advanced Analytics! <a href="/docs/intro"><strong>See what\'s new →</strong></a>',
-      backgroundColor: '#7c3aed',
-      textColor: '#ffffff',
-      isCloseable: true,
-    },
-
-    colorMode: {
-      defaultMode: 'dark',
-      disableSwitch: false,
-      respectPrefersColorScheme: false,
-    },
-
-    docs: {
-      sidebar: {
-        hideable: true,
-        autoCollapseCategories: true,
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        indexBlog: false,
+        docsRouteBasePath: '/',
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 8,
+        explicitSearchResultPath: true,
       },
-    },
+    ],
+  ],
 
-    tableOfContents: {
-      minHeadingLevel: 2,
-      maxHeadingLevel: 4,
-    },
+  themeConfig: {
+    image: 'img/brand/og-image.png',
+    metadata: [{ name: 'description', content: 'How to use Stackly: short links, QR codes, campaigns, event pages, personal links, analytics, CRM and more. Simple guides with screenshots.' }],
+
+    colorMode: { defaultMode: 'light', respectPrefersColorScheme: true },
+
+    docs: { sidebar: { hideable: true, autoCollapseCategories: false } },
+
+    tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
 
     navbar: {
-      title: 'Stackly Docs',
-      logo: {
-        alt: 'Stackly Logo',
-        src: 'img/stackly-final.svg',
-      },
-      hideOnScroll: false,
-      style: 'dark',
+      title: 'Help Center',
+      logo: { alt: 'Stackly', src: 'img/brand/stackly-logo.svg', srcDark: 'img/brand/stackly-logo-white.svg', href: '/' },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Documentation',
-        },
-        { to: '/blog', label: 'Blog', position: 'left' },
-        {
-          href: 'https://app.stackly.in',
-          label: '🚀 Open App',
-          position: 'right',
-          className: 'navbar-app-link',
-        },
-        {
-          href: 'https://github.com/Forepine/stackly-docs',
-          label: 'GitHub',
-          position: 'right',
-        },
+        { type: 'docSidebar', sidebarId: 'guide', position: 'left', label: 'Guides' },
+        { to: '/getting-started/plans-and-limits', label: 'Plans', position: 'left' },
+        { to: '/faq', label: 'FAQ', position: 'left' },
+        
+        { href: 'https://stackly.in/signin', label: 'Open Stackly', position: 'right', className: 'navbar-cta' },
       ],
     },
 
     footer: {
-      style: 'dark',
+      style: 'light',
+      logo: { alt: 'Stackly', src: 'img/brand/stackly-logo.svg', srcDark: 'img/brand/stackly-logo-white.svg', href: 'https://stackly.in', height: 20 },
       links: [
         {
-          title: '📚 Documentation',
+          title: 'Get started',
           items: [
-            { label: 'Getting Started', to: '/docs/intro' },
-            { label: 'URL Shortener', to: '/docs/url-shortener' },
-            { label: 'Web to PDF', to: '/docs/web-to-pdf' },
-            { label: 'Digital vCards', to: '/docs/digital-vcards' },
-            { label: 'Stack Notes', to: '/docs/stack-notes' },
+            { label: 'Welcome to Stackly', to: '/' },
+            { label: 'Your first short link', to: '/links/create-a-link' },
+            { label: 'Plans and limits', to: '/getting-started/plans-and-limits' },
           ],
         },
         {
-          title: '🛠️ Product',
+          title: 'Popular guides',
           items: [
-            { label: 'Stackly App', href: 'https://app.stackly.in' },
-            { label: 'Pricing', to: '/docs/pricing' },
-            { label: 'Integrations & API', to: '/docs/integrations' },
-            { label: 'Branded Domains', to: '/docs/branded-domains' },
+            { label: 'Event pages', to: '/grow/event-pages' },
+            { label: 'Personal links', to: '/grow/personal-links' },
+            { label: 'Analytics', to: '/insights/analytics' },
+            { label: 'Custom domains', to: '/workspace/custom-domains' },
           ],
         },
         {
-          title: '🌐 Connect',
+          title: 'Stackly',
           items: [
-            { label: 'Blog', to: '/blog' },
-            { label: 'GitHub', href: 'https://github.com/Forepine/stackly-docs' },
-            { label: 'Twitter / X', href: 'https://twitter.com/stacklyin' },
-            { label: 'LinkedIn', href: 'https://linkedin.com/company/forepine' },
+            { label: 'stackly.in', href: 'https://stackly.in' },
+            { label: 'Contact support', href: 'mailto:contact@stackly.in' },
+            { label: 'Privacy policy', href: 'https://stackly.in/privacy-policy' },
+            { label: 'Terms of service', href: 'https://stackly.in/terms' },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} <strong>Stackly</strong> by Forepine. All rights reserved.`,
+      copyright: `© ${new Date().getFullYear()} Stackly by Forepine Technologies`,
     },
 
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-      additionalLanguages: ['bash', 'json', 'typescript', 'python', 'http'],
-    },
+    prism: { theme: prismThemes.github, darkTheme: prismThemes.vsDark, additionalLanguages: ['bash', 'json'] },
   } satisfies Preset.ThemeConfig,
 };
 

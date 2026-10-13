@@ -1,0 +1,64 @@
+---
+title: Welcome to Stackly
+slug: /
+sidebar_label: Welcome
+description: Short, step-by-step guides for everything you can do in Stackly.
+hide_title: true
+hide_table_of_contents: true
+---
+
+<div className="hc-head">
+  <span className="hc-head__eyebrow">Stackly Help Center</span>
+  <h1>How can we help?</h1>
+  <p>Short, step-by-step guides for every part of Stackly. No technical knowledge needed.</p>
+  <div className="hc-head__links">
+    <a href="/links/create-a-link">Create a short link</a>
+    <a href="/grow/event-pages">Create an event page</a>
+    <a href="/grow/personal-links">Send personal links</a>
+    <a href="/insights/analytics">Read your analytics</a>
+    <a href="/workspace/custom-domains">Use your own domain</a>
+  </div>
+</div>
+
+<h2 className="hc-section">Get started</h2>
+
+<CardGrid cards={[
+  { icon: 'UserPlus', title: 'Create your account', to: '/getting-started/create-your-account', description: 'Sign up, verify your email and sign in.' },
+  { icon: 'LayoutDashboard', title: 'Tour of the dashboard', to: '/getting-started/dashboard-tour', description: 'Where everything is and what the home screen shows.' },
+  { icon: 'BadgeCheck', title: 'Plans and your trial', to: '/getting-started/plans-and-limits', description: 'What each plan includes and what happens after the trial.' },
+]} />
+
+<h2 className="hc-section">Links</h2>
+
+<CardGrid cards={[
+  { icon: 'Link2', title: 'Create a short link', to: '/links/create-a-link', description: 'Shorten a long link and share it anywhere.' },
+  { icon: 'SlidersHorizontal', title: 'Link options', to: '/links/link-options', description: 'Password, expiry, click limit, targeting and more.' },
+  { icon: 'List', title: 'Manage your links', to: '/links/manage-links', description: 'Search, pause, pin, edit and delete links.' },
+  { icon: 'QrCode', title: 'QR codes', to: '/links/qr-codes', description: 'Download a QR code for any link.' },
+  { icon: 'Layers', title: 'Many links at once', to: '/links/bulk-links', description: 'Shorten a whole list of links in one go.' },
+  { icon: 'Eye', title: 'What visitors see', to: '/links/what-visitors-see', description: 'The page people get in each situation.' },
+]} />
+
+<h2 className="hc-section">Grow</h2>
+
+<CardGrid cards={[
+  { icon: 'Megaphone', title: 'Campaigns', to: '/grow/campaigns', description: 'One link per channel, results side by side.' },
+  { icon: 'CalendarDays', title: 'Event pages', to: '/grow/event-pages', description: 'A page with RSVP, map and calendar buttons.' },
+  { icon: 'Users', title: 'Event guests', to: '/grow/event-guests', description: 'Approve guests, waitlist and guest emails.' },
+  { icon: 'Send', title: 'Personal links', to: '/grow/personal-links', description: 'A link per person, so you know who opened it.' },
+  { icon: 'Tags', title: 'UTM builder', to: '/grow/utm-builder', description: 'Tag links for Google Analytics, the same way every time.' },
+  { icon: 'IdCard', title: 'Visiting cards', to: '/visiting-cards', description: 'A digital business card people can save.' },
+]} />
+
+<h2 className="hc-section">Insights, CRM and workspace</h2>
+
+<CardGrid cards={[
+  { icon: 'BarChart3', title: 'Analytics', to: '/insights/analytics', description: 'Clicks by day, place, device and source.' },
+  { icon: 'FileText', title: 'Reports', to: '/insights/reports', description: 'Download or share reports with clients.' },
+  { icon: 'Contact', title: 'Leads and deals', to: '/crm/leads', description: 'Keep leads and brand deals in one place.' },
+  { icon: 'Folder', title: 'Collections', to: '/workspace/collections', description: 'Group links, for example one folder per client.' },
+  { icon: 'Globe', title: 'Custom domains', to: '/workspace/custom-domains', description: 'Short links on go.yourbrand.com.' },
+  { icon: 'Settings', title: 'Account and settings', to: '/account/profile', description: 'Profile, team, billing, API keys and more.' },
+]} />
+
+Can't find what you need? See the [FAQ](/faq) or write to [contact@stackly.in](mailto:contact@stackly.in).

@@ -1,0 +1,56 @@
+---
+title: Custom domains
+description: Use your own domain, like go.yourbrand.com, for your short links and event pages.
+---
+
+Share links on your own name, like `go.yourbakery.in/menu`, instead of `stackly.in/menu`. People trust a link that shows your brand, so more of them click.
+
+<Shot id="workspace/domains-list" title="Custom domains page with one Live domain and one Waiting for DNS" />
+
+## Connect a domain <PlanBadge plan="Growth" />
+1. In the left menu, under **Workspace**, click **Domains**.
+2. Click **Connect domain**.
+3. Type the domain in **Domain / Subdomain**, for example `go.yourbrand.com`. A subdomain (the `go.` part) is best, because your main website keeps working as it is.
+4. Click **Connect Domain**. The domain shows as **Waiting for DNS**.
+
+## Add the DNS record
+DNS settings live at the company where you bought your domain. You add one record there that sends the subdomain to Stackly. The domain card shows what to type:
+
+| Field | What to type |
+|---|---|
+| **Type** | `CNAME` |
+| **Name / Host** | Only the subdomain part, for example `go` |
+| **Value / Points to** | `cname.stackly.link` |
+
+<Shot id="workspace/domains-dns-record" title="Domain card showing the Type, Name / Host and Value / Points to record" />
+
+Where to add it:
+- **GoDaddy**: open **My Products**, find the domain and open its **DNS** settings, then add a new record.
+- **Hostinger**: in hPanel, open **Domains**, pick the domain, then open its DNS settings and add a record.
+- **Cloudflare**: open the domain, go to **DNS** → **Records** and click **Add record**. Set the proxy to **DNS only** (grey cloud).
+
+Then, back in Stackly:
+1. On the domain card, click **Check DNS**.
+2. When the status changes to **Verified**, click **Turn on HTTPS** if you see it. HTTPS is free.
+
+## Use the domain
+- **Links**: when you create a link, pick your domain in the **Domain** list. Only verified domains appear.
+- **Event pages**: pick it next to **Event link** on the event form.
+
+## Pause or remove a domain
+- To pause it, turn off the **Live** switch on the card. It then shows **Paused**, and its links stop opening until you turn it back on.
+- To remove it, click the bin icon (**Remove domain**) and confirm.
+
+:::caution
+When you remove a domain, every short link on it stops working until you add the domain back.
+:::
+
+## Good to know
+- Custom domains aren't included in Free or Starter. On those plans the page asks you to upgrade.
+- Each plan allows a set number of domains. You can see yours under **Billing & Plans** → **Custom Domains**.
+- Statuses: **Waiting for DNS** (record not found yet), **Verified** (ready to use) and **DNS check failed** (record missing or wrong).
+
+## Troubleshooting
+- **Status says DNS check failed** → Check all three fields, wait a while, then click **Check DNS** again. A DNS change can take up to 24–48 hours to work everywhere.
+- **Visitors see "This domain isn't set up yet", or you get "Your Custom domain is not active"** → The domain is paused. Turn its **Live** switch back on.
+- **My domain isn't in the Domain list** → It isn't verified yet. Finish the DNS step first.

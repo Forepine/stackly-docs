@@ -1,59 +1,36 @@
 import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
-/**
- * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
- - provide next/previous navigation
-
- The sidebars can be generated from the filesystem, or explicitly defined here.
-
- Create as many sidebars as you want.
- */
+// Same order and names as the Stackly sidebar, so people find things where they expect them
 const sidebars: SidebarsConfig = {
-  tutorialSidebar: [
+  guide: [
+    'index',
     {
-      type: 'category',
-      label: '🚀 Getting Started',
-      collapsed: false,
-      items: ['intro', 'dashboard'],
+      type: 'category', label: 'Getting started', collapsed: false,
+      items: ['getting-started/create-your-account', 'getting-started/dashboard-tour', 'getting-started/plans-and-limits'],
     },
     {
-      type: 'category',
-      label: '🔗 Core Tools',
-      collapsed: false,
+      type: 'category', label: 'Links', collapsed: false,
+      items: ['links/create-a-link', 'links/link-options', 'links/manage-links', 'links/qr-codes', 'links/bulk-links', 'links/what-visitors-see'],
+    },
+    'visiting-cards',
+    {
+      type: 'category', label: 'Grow', collapsed: false,
+      items: ['grow/campaigns', 'grow/event-pages', 'grow/event-guests', 'grow/personal-links', 'grow/utm-builder'],
+    },
+    { type: 'category', label: 'Insights', collapsed: false, items: ['insights/analytics', 'insights/reports', 'insights/client-report-link'] },
+    { type: 'category', label: 'CRM', collapsed: false, items: ['crm/leads', 'crm/brand-deals', 'crm/smart-openers'] },
+    {
+      type: 'category', label: 'Workspace', collapsed: false,
+      items: ['workspace/collections', 'workspace/stack-notes', 'workspace/custom-domains', 'workspace/integrations', 'workspace/browser-extension'],
+    },
+    {
+      type: 'category', label: 'Account & settings', collapsed: false,
       items: [
-        'url-shortener',
-        'branded-domains',
-        'utm-templates',
-        'web-to-pdf',
-        'digital-vcards',
-        'stack-notes',
-        'folders',
+        'account/profile', 'account/password-and-security', 'account/team-members', 'account/billing-and-plans',
+        'account/api-keys', 'account/audit-logs', 'account/data-retention', 'account/refer-and-earn',
       ],
     },
-    {
-      type: 'category',
-      label: '👥 Team & Collaboration',
-      collapsed: false,
-      items: ['team-members', 'integrations'],
-    },
-    {
-      type: 'category',
-      label: '⚙️ Account',
-      collapsed: true,
-      items: [
-        'profile',
-        'change-password',
-        'address-info',
-        'billing-info',
-        'pricing',
-        'api-keys',
-        'audit-logs',
-      ],
-    },
+    'faq',
   ],
 };
 

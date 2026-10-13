@@ -1,0 +1,46 @@
+---
+title: What visitors see
+description: The page someone sees when they open your short link, from a normal redirect to password, expired, paused, limit and blocked pages.
+---
+
+Most of the time, a visitor taps your link and lands on your page straight away. When something stops the link, Stackly shows a short, friendly page instead. Use this guide when a customer says "your link isn't working".
+
+<Shot id="links/visitor-expired-page" title="The 'This link has expired' page a visitor sees" device="phone" />
+
+## Each case
+| What happened | What the visitor sees | What you can do |
+|---|---|---|
+| All good | They go straight to your page. On a phone, links to YouTube, Instagram and similar show **Opening …** and open the app. | Nothing. |
+| Password set | **This link is password protected** with a password box and **Unlock**. A wrong password shows **That password didn't work** and **Try again**. | Send them the password. Passwords are case sensitive. |
+| You paused the link | **This link is turned off** | Turn the link back on from the **Links** page. |
+| Past its end date | **This link has expired** | Edit the link and set a later **Expires on** date. |
+| Click limit reached | **This link is getting lots of clicks** | Top up clicks. See [click limits and top-ups](./manage-links#click-limits-and-top-ups). |
+| Wrong device | **Open this on another device**, with the allowed systems listed | Remove or widen the **Operating system** rule. |
+| Wrong country | **Not available in your location**, with the allowed countries listed | Add their country, or remove the **Country** rule. |
+| Wrong browser | **Open this in another browser**, with the allowed browsers listed | Ask them to switch browser, or widen the **Browser** rule. |
+| Your domain isn't connected | **This domain isn't set up yet** | Finish setting up your domain. See [custom domains](../workspace/custom-domains). |
+| Link doesn't exist | **We couldn't find this link**, with **Go back** | Check the spelling. The link may have been deleted or its back-half changed. |
+| Link blocked | **This link is blocked** (stopped for safety reasons) | Contact Stackly support to have it reviewed. |
+
+Most of these pages count down and then go to the Stackly website after 5 or 10 seconds.
+
+<Shot id="links/visitor-password-page" title="The password page with the Unlock button" device="phone" />
+
+## Event pages and personal links
+Event pages and personal links use their own wording when paused or expired.
+
+| Link type | Paused | Expired |
+|---|---|---|
+| Event page | **[Event name] isn't open right now**. Registrations are closed for now; people already registered keep their spot. | **[Event name] has ended**, with **Discover other events**. |
+| Personal link | **This personal link is paused**. Asks them to reply to your message and ask you to switch it back on. | **This personal link has expired**. Asks them to reply and ask for a new link. |
+
+See [event pages](../grow/event-pages) and [personal links](../grow/personal-links).
+
+## Good to know
+- Stackly checks in this order: domain, link exists, click limit, paused, expired, blocked, device, country, browser, then password. The visitor sees the first problem it finds.
+- To test your link like a visitor, open it in a private browser window.
+
+## Troubleshooting
+- **A customer abroad can't open it** → Check the **Country** rule under **Targeting**.
+- **It works on my laptop but not their phone** → Check the **Operating system** and **Browser** rules.
+- **It worked last week and now says expired** → Links without an end date you picked expire 15 days after creation. Edit the link and set a new date.

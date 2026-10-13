@@ -1,0 +1,59 @@
+---
+title: UTM builder and templates
+description: Add UTM tags to your links so Google Analytics knows where each visitor came from, and save templates so your whole team uses the same names.
+---
+
+UTM tags are small labels added to the end of a link. They tell Google Analytics (and other tools) where a visitor came from. Stackly lets you save them as templates and add them to any short link in one click.
+
+## What the tags mean
+
+| Tag | What it says | Example |
+|---|---|---|
+| Source (`utm_source`) | Which site or app sent the visitor | `instagram`, `google`, `newsletter` |
+| Medium (`utm_medium`) | What kind of traffic it is | `social`, `cpc`, `email` |
+| Campaign (`utm_campaign`) | Which offer or launch it belongs to | `diwali_sale_2026` |
+| Term (`utm_term`) | The paid search keyword | `running+shoes` |
+| Content (`utm_content`) | Which ad or link version | `banner_v2` |
+| Referral (`utm_ref`) | A partner or referrer id | `partner_portal` |
+
+A yoga studio that tags its Instagram bio link with `utm_source=instagram` can later see in Google Analytics exactly how many bookings came from Instagram.
+
+## Create a UTM template <PlanBadge plan="Starter" />
+1. In the left menu, under **Grow**, click **UTM Builder**.
+2. Click **New template**. To start from a common setup, click **Presets**, pick one and change what you need.
+3. Under **Template**, enter a **Name** (for example "Instagram paid") and, if you like, a **Description**.
+4. Under **Tags**, fill in **Source** (required), then **Medium** and **Campaign**. **Term**, **Content** and **Referral** are optional.
+5. Check the **Preview**. Paste a page into **Try it on a URL** to see the full tagged link, then click **Copy tags** or **Copy URL** if you need it now.
+   <Shot id="utm/new-template" title="New UTM template form with tags filled in and the live preview" />
+6. Click **Create template**.
+
+Templates are shared across your workspace, so everyone on your team picks the same names.
+
+:::tip
+Use lowercase and underscores. Google Analytics treats `Facebook` and `facebook` as two different sources.
+:::
+
+## Use a template on a link
+1. Create a link as usual and enter the destination.
+2. Open **UTM tracking** and click **Choose a template or add UTM tags**.
+3. In **Load Saved Preset Template**, pick your template. The tags fill in for you.
+   <Shot id="utm/apply-on-link" title="UTM Campaign Builder window on the link form with a saved template chosen" />
+4. Change any tag if needed, then click **Apply Parameters**.
+
+You can also type tags here without a template. **Source**, **Medium** and **Campaign** are required in this window.
+
+## Edit or delete a template
+1. Open **UTM Builder**.
+2. On the template card, click the pencil to edit, then **Save changes**. Or click the bin icon to delete it and confirm.
+
+The copy icon on a card copies just the tags (the part starting `?utm_`).
+
+<Shot id="utm/templates-list" title="UTM templates page with saved template cards" />
+
+## Free UTM template gallery
+Anyone can browse ready-made tag setups at [stackly.in/utm-templates](https://stackly.in/utm-templates), with no account. It covers Meta Ads, Google Ads, Instagram creators, WhatsApp, email newsletters, YouTube, LinkedIn, QR codes on print, and SMS. Each page lets you paste your page under **Landing page** and copy the tagged link.
+
+## Good to know
+- Saving templates and adding UTM tags to links needs **Starter** or above. On Free, the menu shows a **Starter** badge. You can try the builder and browse presets, but the save button reads **Upgrade to save**.
+- Each template name must be unique in your workspace.
+- [Campaigns](./campaigns) add these tags for you, one link per channel.
