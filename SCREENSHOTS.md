@@ -2,7 +2,7 @@
 
 Save each screenshot at the path shown (`.png`, `.webp` or `.jpg`) and it replaces the placeholder in that guide automatically.
 Desktop shots: browser window about 1440px wide, light mode. Phone shots: marked (phone).
-**78 screenshots** across the guides.
+**79 screenshots** across the guides.
 
 
 ## API keys  ·  `/account/api-keys`
@@ -70,6 +70,7 @@ Desktop shots: browser window about 1440px wide, light mode. Phone shots: marked
 - [ ] `static/img/docs/campaigns/analytics.png`: Campaign analytics with the channel comparison chart
 
 ## Manage event guests  ·  `/grow/event-guests`
+- [ ] `static/img/docs/events/registration-questions.png`: Registration questions in the event form, with a dropdown and the Required switch
 - [ ] `static/img/docs/events/guests-tab.png`: Guests tab with At a glance bar and a guest list showing Going, Pending and Waitlist
 - [ ] `static/img/docs/events/guest-status.png` (phone): Event page showing a guest's Pending approval status
 
