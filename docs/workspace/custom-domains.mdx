@@ -20,7 +20,7 @@ DNS settings live at the company where you bought your domain. You add one recor
 |---|---|
 | **Type** | `CNAME` |
 | **Name / Host** | Only the subdomain part, for example `go` |
-| **Value / Points to** | `cname.stackly.link` |
+| **Value / Points to** | `stackly.in` |
 
 <Shot id="workspace/domains-dns-record" title="Domain card showing the Type, Name / Host and Value / Points to record" />
 
@@ -51,6 +51,7 @@ When you remove a domain, every short link on it stops working until you add the
 - Statuses: **Waiting for DNS** (record not found yet), **Verified** (ready to use) and **DNS check failed** (record missing or wrong).
 
 ## Troubleshooting
+- **Check DNS fails on Cloudflare** → The record is set to **Proxied** (orange cloud), which hides the CNAME. Click the cloud so it turns grey (**DNS only**), save, then click **Check DNS** again.
 - **Status says DNS check failed** → Check all three fields, wait a while, then click **Check DNS** again. A DNS change can take up to 24–48 hours to work everywhere.
 - **Visitors see "This domain isn't set up yet", or you get "Your Custom domain is not active"** → The domain is paused. Turn its **Live** switch back on.
 - **My domain isn't in the Domain list** → It isn't verified yet. Finish the DNS step first.
