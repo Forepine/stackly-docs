@@ -29,9 +29,11 @@ Where to add it:
 - **Hostinger**: in hPanel, open **Domains**, pick the domain, then open its DNS settings and add a record.
 - **Cloudflare**: open the domain, go to **DNS** → **Records** and click **Add record**. Set the proxy to **DNS only** (grey cloud).
 
+Sometimes the card also asks for one or two **TXT** records (under "Also add these records"). Add them the same way. They prove the domain is yours and let us set up HTTPS.
+
 Then, back in Stackly:
-1. On the domain card, click **Check DNS**.
-2. When the status changes to **Verified**, click **Turn on HTTPS** if you see it. HTTPS is free.
+1. On the domain card, click **Check DNS**. You can also just wait: Stackly checks again every 10 minutes.
+2. When the status changes to **Verified**, HTTPS turns on by itself within a few minutes. It's free.
 
 ## Use the domain
 - **Links**: when you create a link, pick your domain in the **Domain** list. Only verified domains appear.
