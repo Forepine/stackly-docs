@@ -94,10 +94,6 @@ Desktop shots: browser window about 1440px wide, light mode. Phone shots: marked
 - [ ] `static/img/docs/insights/analytics-geography.png`: Geography tab with the world map and city list
 - [ ] `static/img/docs/insights/retention-notice.png`: The 'Showing the last … days' note above the summary cards
 
-## Share a report with a client  ·  `/insights/client-report-link`
-- [ ] `static/img/docs/insights/share-report-modal.png`: Share report window with title, expiry and the Active links list
-- [ ] `static/img/docs/insights/shared-report-page.png`: Shared report page as a client sees it in the browser
-
 ## Reports  ·  `/insights/reports`
 - [ ] `static/img/docs/insights/reports-page.png`: Reports page with the date range buttons, summary cards and click table
 - [ ] `static/img/docs/insights/export-modal.png`: Export Links Report window with the date range and CSV selected

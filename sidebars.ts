@@ -17,7 +17,7 @@ const sidebars: SidebarsConfig = {
       type: 'category', label: 'Grow', collapsed: false,
       items: ['grow/campaigns', 'grow/event-pages', 'grow/event-guests', 'grow/personal-links', 'grow/utm-builder'],
     },
-    { type: 'category', label: 'Insights', collapsed: false, items: ['insights/analytics', 'insights/reports', 'insights/client-report-link'] },
+    { type: 'category', label: 'Insights', collapsed: false, items: ['insights/analytics', 'insights/reports'] },
     { type: 'category', label: 'CRM', collapsed: false, items: ['crm/leads', 'crm/brand-deals', 'crm/smart-openers'] },
     {
       type: 'category', label: 'Workspace', collapsed: false,
