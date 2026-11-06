@@ -1,0 +1,54 @@
+---
+title: Retargeting pixels
+description: Fire your Meta, Google, LinkedIn, TikTok or X pixel when someone clicks a short link, so you can show them ads later.
+---
+
+A retargeting pixel is a small piece of code from an ad platform. When it runs, the visitor joins your ad audience, and you can show them ads later. Usually the pixel has to be on your own website. With Stackly it runs on the short link itself, so it works even when the link goes to a page you don't own: an Amazon listing, a YouTube video or a partner's site.
+
+A shoe brand shares `go.brand.in/insta` in its Instagram bio. The link goes to its Myntra store. Everyone who taps it joins the brand's Meta audience, and the brand shows them a discount ad the next week.
+
+## Supported platforms
+
+| Platform | What to paste | Looks like |
+|---|---|---|
+| Meta Pixel (Facebook, Instagram) | Pixel ID | `123456789012345` |
+| Google Ads | Tag ID | `AW-123456789` |
+| Google Analytics 4 | Measurement ID | `G-AB12CD34EF` |
+| Google Tag Manager | Container ID | `GTM-AB12CD3` |
+| LinkedIn Insight Tag | Partner ID | `1234567` |
+| TikTok Pixel | Pixel ID | `C4ABCDEFGHIJ1234567K` |
+| X (Twitter) Pixel | Pixel ID | `o1a2b` |
+
+## Add a pixel <PlanBadge plan="Pro" />
+1. In the left menu, under **Grow**, click **Retargeting Pixels**.
+2. Under **Add a pixel**, pick the **Platform** and paste the **Pixel ID**. The hint under the fields tells you where to find it.
+3. Give it a **Name** you'll recognise, for example "Acme Foods: Meta". Then click **Add pixel**.
+   <Shot id="grow/pixels-add" title="Retargeting Pixels page with the Add a pixel form" />
+
+## Fire it on a link
+1. Create or edit a link.
+2. Open **More options → Retargeting & conversions**.
+3. Under **Retargeting pixels**, click each pixel this link should fire. One link can fire up to 5.
+4. Save the link.
+   <Shot id="grow/pixels-on-link" title="Retargeting & conversions section on the link form with two pixels selected" />
+
+You can also pick pixels on the **Bulk** tab. Every link in the batch then fires them.
+
+## Fire it on a visiting card
+1. Open **Visiting Card** and edit a card.
+2. In **Retargeting pixels**, click the pixels to fire (up to 5).
+3. Save. Everyone who opens the card now joins those audiences.
+
+On a card there's no "Opening…" page: the pixels load on the card itself.
+
+## What visitors see
+A link with pixels shows a short "Opening…" page for under 1.5 seconds while the pixels load, then goes on to the destination. A link without pixels still redirects straight away.
+
+## Good to know
+- Pixels need **Pro** or above (Agency included).
+- On the Agency plan, pixels belong to the client workspace that's open. Each client's links fire only that client's pixels.
+- Deleting a pixel takes it off every link and card that used it. They keep working.
+- Bots and link previews (WhatsApp, Slack and so on) don't fire pixels.
+- Password-protected links don't fire pixels.
+- If your visitors are in the EU or UK, make sure your privacy notice covers ad tracking on your links.
+- To see the sales that came from a link, turn on [conversion tracking](../insights/conversions).

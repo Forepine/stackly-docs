@@ -1,0 +1,79 @@
+---
+title: Conversion tracking
+description: See the purchases, leads and sign-ups each short link brings in, and show the revenue on client reports.
+---
+
+Clicks show reach. Conversions show results: the purchases, leads and sign-ups that happened on the website after someone clicked your link. Stackly matches each one to the link and campaign it came from. You see the count, the revenue and the conversion rate.
+
+An agency runs a Diwali campaign for a clothing brand. The client report no longer stops at "4,200 clicks". It says "4,200 clicks → 130 orders → ₹1,88,500".
+
+## How it works
+1. You turn on **Track conversions** on a link.
+2. Every click reaches the website with a click id added to the URL, for example `?sclid=Xy3…`.
+3. A small snippet on the website keeps that id. When the visitor buys or signs up, the website sends it back to Stackly with the amount.
+4. Stackly credits the conversion to the link and its campaign.
+
+The click id is signed by Stackly and expires 90 days after the click. Nobody can make one up, and no API key is needed.
+
+## 1. Turn it on for a link <PlanBadge plan="Pro" />
+1. Create or edit a link.
+2. Open **More options → Retargeting & conversions**.
+3. Switch on **Track conversions** and save.
+
+## 2. Add the snippet to the website
+Send this to whoever manages the website. It works on Shopify, WordPress, Wix and custom sites. Put it in the `<head>` of every page:
+
+```html
+<script>window.stackly=window.stackly||function(){(stackly.q=stackly.q||[]).push(arguments)};stackly.l=location.search;</script>
+<script async src="https://stackly.in/api/v1/conversions/sdk.js"></script>
+```
+
+Then put this on the thank-you or order-confirmed page:
+
+```html
+<script>
+  stackly('conversion', { event: 'purchase', value: 499, currency: 'INR', orderId: 'ORDER-1001' });
+</script>
+```
+
+| Field | What it is | Required |
+|---|---|---|
+| `event` | What happened: `purchase`, `lead`, `signup` or any name you like (letters, numbers, `_`, `-`) | No, defaults to `conversion` |
+| `value` | The amount. Leave it out for leads and sign-ups | No |
+| `currency` | 3-letter code such as `INR` or `USD` | No, defaults to `INR` |
+| `orderId` | The order or lead number. The same number is counted once, so a refreshed thank-you page doesn't double-count | Recommended |
+
+:::tip
+The snippet keeps the click id for 90 days in a first-party cookie. A visitor who clicks today and buys next week is still credited.
+:::
+
+## Or send it from the server
+This is the most reliable way: ad blockers can't stop it. Use it with payment webhooks (Razorpay, Stripe), CRMs or your own backend. Save the click id with the order. You can read it from the `_sclid` cookie, or call `stackly('sclid')` in the browser. Then send it when the payment succeeds:
+
+```bash
+curl -X POST https://stackly.in/api/v1/conversions/track \
+  -H "Content-Type: application/json" \
+  -d '{"sclid":"<click id>","event":"purchase","value":499,"currency":"INR","orderId":"ORDER-1001"}'
+```
+
+The answer is `recorded`, `duplicate` (already counted) or `not-tracked` (tracking was turned off on that link).
+
+## 3. See the results
+In the left menu, under **Insights**, click **Conversions**. Pick a date range to see:
+- **Conversions**, **Revenue**, **Conversion rate** and **Clicks** on tracked links
+- Conversions per day
+- **Links that convert**: clicks, conversions, rate and revenue for each link
+- **By event**: purchases, leads and sign-ups separately
+- **Latest conversions**, with the order number and whether they came from the website or a server
+
+<Shot id="insights/conversions" title="Conversions page with totals, the daily chart and the links table" />
+
+## On client reports
+[Shared reports](./reports) and scheduled report emails show a **Results from these clicks** box once a link or campaign has conversions. It shows the conversions, the revenue and the conversion rate.
+
+## Good to know
+- Conversion tracking needs **Pro** or above (Agency included).
+- On the Agency plan, each client workspace has its own conversions.
+- Turning tracking off stops new conversions for that link. Conversions already recorded stay.
+- Amounts are added up as sent. If a link gets sales in more than one currency, the totals show the most common one.
+- Some sites drop unknown URL parameters on redirect. Test once: click your link and check that `sclid=` is still in the address bar on the landing page.
