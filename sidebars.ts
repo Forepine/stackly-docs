@@ -21,7 +21,7 @@ const sidebars: SidebarsConfig = {
     { type: 'category', label: 'CRM', collapsed: false, items: ['crm/leads', 'crm/brand-deals', 'crm/smart-openers'] },
     {
       type: 'category', label: 'Workspace', collapsed: false,
-      items: ['workspace/collections', 'workspace/stack-notes', 'workspace/custom-domains', 'workspace/integrations', 'workspace/browser-extension'],
+      items: ['workspace/client-billing', 'workspace/collections', 'workspace/stack-notes', 'workspace/custom-domains', 'workspace/integrations', 'workspace/browser-extension'],
     },
     {
       type: 'category', label: 'Account & settings', collapsed: false,
